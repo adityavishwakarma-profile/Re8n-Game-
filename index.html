@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>RE8N.@ditya</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="app-shell">
+    <div class="scanlines"></div>
+    <section id="game" aria-label="Udta Panchi"></section>
+
+    <section id="menu-screen" class="ui-screen">
+      <div class="corner corner-tl"></div>
+      <div class="corner corner-tr"></div>
+      <div class="corner corner-bl"></div>
+      <div class="corner corner-br"></div>
+
+      <div class="brand">
+        <div class="eyebrow">Fall | Arise |Refly </div>
+        <h1>Re8N <span>Fly</span></h1>
+        <p>Developed &nbsp;By &nbsp;Aditya</p>
+      </div>
+
+      <div class="difficulty">
+        <button class="difficulty-btn active" data-difficulty="EASY">SIMPLE</button>
+        <button class="difficulty-btn" data-difficulty="HARD">HARD</button>
+        <button class="difficulty-btn" data-difficulty="INSANE">INSANE</button>
+      </div>
+
+      <button id="play-btn" class="play-btn">PLAY NOW</button>
+      <div class="hint">SPACE · CLICK · TAP TO FLAP</div>
+
+      <div class="menu-footer">
+        <span>For More </span>
+        <span>Details</span>
+        <span>Visit the Github Repo</span>
+      </div>
+    </section>
+
+    <section id="game-over-screen" class="ui-screen hidden">
+      <div class="game-over-card">
+        <div class="eyebrow">CLOSE BUT NO&nbsp;CIGAR </div>
+        <h2>Haar<span>gya</span></h2>
+        <p>Phirse Try kar</p>
+
+        <div class="score-grid">
+          <div class="score-box">
+            <small>SCORE</small>
+            <strong id="final-score">0</strong>
+          </div>
+          <div class="score-box">
+            <small>BEST</small>
+            <strong id="final-best">0</strong>
+          </div>
+        </div>
+
+        <button id="retry-btn" class="retry-btn">RETRY MISSION</button>
+        <button id="menu-btn" class="text-btn">BACK TO MENU</button>
+      </div>
+    </section>
+
+    <section id="hud" class="hud hidden">
+      <div>
+        <span>SCORE</span>
+        <strong id="hud-score">0</strong>
+      </div>
+      <div>
+        <span>BEST</span>
+        <strong id="hud-best">0</strong>
+      </div>
+      <button id="hud-menu" title="Back to menu">×</button>
+    </section>
+    <aside id="dev-panel" class="dev-panel hidden">
+      <button data-mode="AI">AI PLAY</button>
+      <button data-mode="TRAIN">AI TRAIN</button>
+      <button id="reset-ai">RESET AI</button>
+      <span id="dev-status">AI READY</span>
+    </aside>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
