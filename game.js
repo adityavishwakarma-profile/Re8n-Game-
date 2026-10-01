@@ -916,10 +916,15 @@ window.GameUI = {
     this.elements.finalBest.textContent = best;
   },
 
-  updateHUD(score, best) {
-    this.elements.hudScore.textContent = score;
-    this.elements.hudBest.textContent = best;
-  }
+ updateHUD(score, best) {
+    if (this.elements.hudScore) {
+        this.elements.hudScore.textContent = score;
+    }
+
+    if (this.elements.hudBest) {
+        this.elements.hudBest.textContent = best;
+    }
+}
 };
 
 const phaserGame = new Phaser.Game({
