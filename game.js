@@ -12,7 +12,7 @@ const GAME = {
 };
 
 const PHYSICS = {
-  gravity: 0.3,
+  gravity: 0.4,
   flap: -8,
   maxFall: 10
 };
